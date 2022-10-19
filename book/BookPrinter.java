@@ -4,7 +4,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class BookToFile {
+public class BookPrinter {
+
+    public static void printToScreen(Book book) {
+        do {
+            System.out.println(book.getCurrentPage());
+        } while (book.turnToNextPage());
+    }
 
     public static void printToFile(Book book) {
         boolean isEven = false;
@@ -26,4 +32,5 @@ public class BookToFile {
             System.out.println("Cannot print this book due to IOException");
         }
     }
+
 }
